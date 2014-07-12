@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <h1>Add webhook to Trello</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <div id="not-authorized">
+            <a id="authorize" href="#">Authorize with Trello</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="authorized">
+      <form id="add_webhook" action="">
+        <div>
+          Board:
+          <select id="boards">
+            <option>Select a board to add webhook</option>
+          </select>
+        </div>
+        <div>
+          Webhook URI:
+          <input type="text" id="webhook_uri" size="60">
+        </div>
+        <input type="submit" value="Add">
+      </form>
+      <div id="webhooks">
+      </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://api.trello.com/1/client.js?key=96e599040b3af75649b228b7adb1e01e"></script>
+    <script src="application.js"></script>
+  </body>
+</html>
