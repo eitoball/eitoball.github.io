@@ -66,6 +66,7 @@ $(document).ready(function() {
       Trello.authorize({
         type: "popup",
         name: "idobata Trello webhook",
+        expiration: "never",
         success: onAuthorized,
         error: onDenied
       });
